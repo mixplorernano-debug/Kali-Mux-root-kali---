@@ -2,9 +2,53 @@
 
 <img width="200px"> <img src="https://i.ibb.co/fVnp1kz5/Termux-banner-or-interface.png" alt="Termux-banner-or-interface" border="0">
 
-
-
 #### Qurxin is Termux banner or interface with parroto os shell and Wellcome robot like Jarvis in Iron Man movie created with love 16-oct-2020
+
+pkg update && pkg upgrade -y
+        pkg install imagemagick git termux-api -y
+    else
+        case "$ID" in
+            debian|kali|ubuntu)
+                sudo apt update && sudo apt install -y imagemagick plymouth plymouth-x11 git
+                ;;
+            arch)
+                sudo pacman -Sy --needed --noconfirm imagemagick plymouth git
+                ;;
+            fedora)
+                sudo dnf install -y ImageMagick plymouth plymouth-plugin-script git
+                ;;
+        esac
+    fi
+}
+
+# 3. Asset Processing: The BEAR-Kali Synthesis
+process_assets() {
+    echo "Processing BEAR Logo with glitch artifacts and Kali text..."
+    # Placeholder for BEAR logo download if not present
+    if [! -f "bear_logo.png" ]; then
+        # Replace with actual BEAR logo URL or local path
+        echo "Please ensure bear_logo.png is in the current directory."
+        exit 1
+    fi
+```
+    # Create the stylized Kali-text overlay using DejaVu-Sans for Unicode support
+    convert bear_logo.png -gravity South -background none -extent 100x120% \
+        -font DejaVu-Sans-Bold -fill "#00ff41" -pointsize 24 \
+        -annotate +0+10 "$(printf "$KALI_TEXT")" theme_composite.png
+    
+    # Generate Glitch Frames for Termux/Android fallback
+    if; then
+        mkdir -p part0
+        for i in {100..120}; do
+            offset_x=$((RANDOM % 10 - 5))
+            offset_y=$((RANDOM % 10 - 5))
+            convert theme_composite.png -roll +$offset_x+$offset_y "part0/frame_$i.png"
+        done
+```
+
+
+
+
 
 ## [+] Installation & Usage :atom_symbol:
 ```
