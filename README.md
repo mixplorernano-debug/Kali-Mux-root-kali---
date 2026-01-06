@@ -3,7 +3,7 @@
 <img width="200px"> <img src="https://i.ibb.co/fVnp1kz5/Termux-banner-or-interface.png" alt="Termux-banner-or-interface" border="0">
 
 #### Qurxin is Termux banner or interface with parroto os shell and Wellcome robot like Jarvis in Iron Man movie created with love 16-oct-2020
-
+```
 pkg update && pkg upgrade -y
         pkg install imagemagick git termux-api -y
     else
@@ -16,10 +16,7 @@ pkg update && pkg upgrade -y
                 ;;
             fedora)
                 sudo dnf install -y ImageMagick plymouth plymouth-plugin-script git
-                ;;
-        esac
-    fi
-}
+```
 
 # 3. Asset Processing: The BEAR-Kali Synthesis
 process_assets() {
