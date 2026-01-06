@@ -14,7 +14,7 @@ pkg install imagemagick git catimg termux-api -y
 ### debian|kali|ubuntu)
 ```
 
-sudo apt update && sudo apt install -y imagemagick plymouth plymouth-x11 git zip
+apt update && apt install -y imagemagick plymouth plymouth-x11 git zip
 
 ```
 
